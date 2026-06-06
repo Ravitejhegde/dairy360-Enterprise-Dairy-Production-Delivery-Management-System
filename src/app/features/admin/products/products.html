@@ -1,4 +1,32 @@
 <h1>Products</h1>
+<h2>Add Product</h2>
+
+<input
+  type="text"
+  placeholder="Product Name"
+  [(ngModel)]="newProductName">
+
+<br><br>
+
+<input
+  type="number"
+  placeholder="Price"
+  [(ngModel)]="newProductPrice">
+
+<br><br>
+
+<input
+  type="number"
+  placeholder="Quantity"
+  [(ngModel)]="newProductQuantity">
+
+<br><br>
+
+<button (click)="addProduct()">
+  Add Product
+</button>
+
+<hr>
 
 <table>
 
