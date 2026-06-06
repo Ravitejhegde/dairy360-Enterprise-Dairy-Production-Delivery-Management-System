@@ -1,11 +1,25 @@
 <h1>Dairy360 Dashboard</h1>
 
-<hr>
+<div class="dashboard-cards">
 
-<h2>Total Customers: {{ customerCount }}</h2>
+  <div class="card">
+    <h3>Customers</h3>
+    <p>{{ customerCount }}</p>
+  </div>
 
-<h2>Today's Orders: {{ todayOrderCount }}</h2>
+  <div class="card">
+    <h3>Orders</h3>
+    <p>{{ todayOrderCount }}</p>
+  </div>
 
-<h2>Milk Production: {{ dailyMilkProductionLiters }} L</h2>
+  <div class="card">
+    <h3>Production</h3>
+    <p>{{ dailyMilkProductionLiters }} L</p>
+  </div>
 
-<h2>Revenue: ₹{{ todayRevenueAmount }}</h2>
+  <div class="card">
+    <h3>Revenue</h3>
+    <p>₹{{ todayRevenueAmount }}</p>
+  </div>
+
+</div>
