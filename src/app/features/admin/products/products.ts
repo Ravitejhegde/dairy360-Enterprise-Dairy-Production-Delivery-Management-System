@@ -34,6 +34,17 @@ export class Products {
 
   addProduct() {
 
+    if (
+      this.newProductName.trim() === '' ||
+      this.newProductPrice <= 0 ||
+      this.newProductQuantity <= 0
+    ) {
+
+      alert('Please enter valid product details');
+
+      return;
+    }
+
     this.products.push({
 
       productName: this.newProductName,
@@ -43,9 +54,18 @@ export class Products {
       availableQuantity: this.newProductQuantity
 
     });
-     this.newProductName = '';
+
+    this.newProductName = '';
+
     this.newProductPrice = 0;
+
     this.newProductQuantity = 0;
+
+  }
+
+  deleteProduct(index: number) {
+
+    this.products.splice(index, 1);
 
   }
 

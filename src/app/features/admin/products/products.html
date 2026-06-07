@@ -34,15 +34,21 @@
     <th>Product</th>
     <th>Price</th>
     <th>Available</th>
+    <th>Action</th>
   </tr>
 
-  <tr *ngFor="let product of products">
+  <tr *ngFor="let product of products; let index = index">
 
     <td>{{ product.productName }}</td>
 
     <td>₹{{ product.unitPrice }}</td>
 
     <td>{{ product.availableQuantity }}</td>
+
+    <td>
+      <button (click)="deleteProduct(index)">
+        Delete
+      </button>
 
   </tr>
 
