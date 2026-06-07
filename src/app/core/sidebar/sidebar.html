@@ -1,37 +1,38 @@
 <div class="sidebar">
 
-  <h2>Dairy360</h2>
+  <button class="toggle-btn" (click)="toggleSidebar()">
+  ☰
+</button>
+
+<div class="sidebar"
+     [class.collapsed]="isCollapsed">
+
+  <h2 *ngIf="!isCollapsed">Dairy360</h2>
 
   <ul>
 
     <li>
-      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/dashboard">
+        🏠 <span *ngIf="!isCollapsed">Dashboard</span>
+      </a>
     </li>
 
     <li>
-      <a routerLink="/products">Products</a>
+      <a routerLink="/products">
+        📦 <span *ngIf="!isCollapsed">Products</span>
+      </a>
     </li>
 
     <li>
-      <a routerLink="/customers">Customers</a>
-    </li>
-
-    <li>
-      <a routerLink="/orders">Orders</a>
-    </li>
-
-    <li>
-      <a routerLink="/inventory">Inventory</a>
-    </li>
-
-    <li>
-      <a routerLink="/delivery">Delivery</a>
-    </li>
-
-    <li>
-      <a routerLink="/reports">Reports</a>
+      <a routerLink="/customers">
+        👥 <span *ngIf="!isCollapsed">Customers</span>
+      </a>
     </li>
 
   </ul>
+
+</div>
+
+  
 
 </div>
